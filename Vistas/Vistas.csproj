@@ -1,0 +1,163 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8-chevron-down-50.png" />
+    <None Remove="icons8-chevron-up-50.png" />
+    <None Remove="maxresdefault.jpg" />
+    <None Remove="pngegg.png" />
+    <None Remove="Recursos\Blue Phone Wallpaper HD.jpg" />
+    <None Remove="Recursos\Iconos\BLANCO\icons8-add-100.png" />
+    <None Remove="Recursos\Iconos\BLANCO\icons8-add-50.png" />
+    <None Remove="Recursos\Iconos\BLANCO\icons8-add-male-user-64.png" />
+    <None Remove="Recursos\Iconos\BLANCO\icons8-exit-96.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-add-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-add-male-user-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-ball-point-pen-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-black-tie-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-box-important-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-chevron-down-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-chevron-up-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-clock-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-manager-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-search-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-toggle-off-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-toggle-on-50.png" />
+    <None Remove="Recursos\Iconos\GRIS\icons8-user-groups-50.png" />
+    <None Remove="Recursos\Iconos\icons8-add-50.png" />
+    <None Remove="Recursos\Iconos\icons8-add-male-user-50.png" />
+    <None Remove="Recursos\Iconos\icons8-ball-point-pen-50.png" />
+    <None Remove="Recursos\Iconos\icons8-black-tie-50.png" />
+    <None Remove="Recursos\Iconos\icons8-box-important-50.png" />
+    <None Remove="Recursos\Iconos\icons8-chevron-down-50.png" />
+    <None Remove="Recursos\Iconos\icons8-chevron-up-50.png" />
+    <None Remove="Recursos\Iconos\icons8-clock-50.png" />
+    <None Remove="Recursos\Iconos\icons8-search-50.png" />
+    <None Remove="Recursos\Iconos\icons8-toggle-off-50.png" />
+    <None Remove="Recursos\Iconos\icons8-toggle-on-50.png" />
+    <None Remove="Recursos\Iconos\icons8-user-groups-50.png" />
+    <None Remove="Recursos\Iconos\NEGRO\icons8-box-important-24 %281%29.png" />
+    <None Remove="Recursos\Iconos\NEGRO\icons8-box-important-24.png" />
+    <None Remove="Recursos\Iconos\NEGRO\icons8-toggle-off-30.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-add-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-add-male-user-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-administrator-male-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-ball-point-pen-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-black-tie-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-box-important-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-chevron-down-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-chevron-up-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-clock-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-exit-32.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-manager-48.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-search-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-toggle-off-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-toggle-on-50.png" />
+    <None Remove="Recursos\Iconos\PURPURA\icons8-user-groups-50.png" />
+    <None Remove="Recursos\maxresdefault.jpg" />
+    <None Remove="Recursos\pngegg.png" />
+    <None Remove="Recursos\Premium Vector _ Modern tech purple background with abstract style.jfif" />
+    <None Remove="Recursos\Premium Vector _ Modern tech purple background with abstract style.jpg" />
+    <None Remove="Recursos\Titlebar3.jpg" />
+    <None Remove="Recursos\TitlebarRoug.jpg" />
+    <None Remove="Recursos\TitlebarRougblue.jpg" />
+    <None Remove="Recursos\Wallpapers Huawei Mate 9 - Pack 6.jpg" />
+    <None Remove="Tecno Phantom 9 Wallpaper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-chevron-down-50.png" />
+    <Resource Include="icons8-chevron-up-50.png" />
+    <Resource Include="Recursos\Iconos\BLANCO\icons8-add-100.png" />
+    <Resource Include="Recursos\Iconos\BLANCO\icons8-add-50.png" />
+    <Resource Include="Recursos\Iconos\BLANCO\icons8-add-male-user-64.png" />
+    <Resource Include="Recursos\Iconos\NEGRO\icons8-box-important-24 (1).png" />
+    <Resource Include="Recursos\Iconos\NEGRO\icons8-box-important-24.png" />
+    <Resource Include="Recursos\Iconos\NEGRO\icons8-toggle-off-30.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="maxresdefault.jpg" />
+    <Resource Include="pngegg.png" />
+    <Resource Include="Recursos\Iconos\BLANCO\icons8-exit-96.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-add-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-add-male-user-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-ball-point-pen-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-black-tie-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-box-important-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-chevron-down-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-chevron-up-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-clock-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-manager-50.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Recursos\Iconos\GRIS\icons8-search-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-toggle-off-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-toggle-on-50.png" />
+    <Resource Include="Recursos\Iconos\GRIS\icons8-user-groups-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-add-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-add-male-user-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-administrator-male-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-ball-point-pen-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-black-tie-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-box-important-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-chevron-down-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-chevron-up-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-clock-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-exit-32.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-manager-48.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-search-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-toggle-off-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-toggle-on-50.png" />
+    <Resource Include="Recursos\Iconos\PURPURA\icons8-user-groups-50.png" />
+    <Resource Include="Recursos\pngegg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="autosize" Version="3.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controladores\Controladores.csproj" />
+    <ProjectReference Include="..\PersistenciaBD\PersistenciaBD.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Recursos\maxresdefault.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Tecno Phantom 9 Wallpaper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

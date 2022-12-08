@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="Vistas.TarjetaActividades"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" d:DesignWidth="800" Height="98">
+
+    <Grid x:Name="gridTarjAct" Width="833" Margin="-10,3,-23,11" Initialized="gridTarjAct_Initialized">
+        <Rectangle x:Name="tarjeta1" HorizontalAlignment="Center" Stroke="Gray" Width="800" OpacityMask="{DynamicResource MahApps.Brushes.Badged.Background.Disabled}" Margin="0,0,0,9" Opacity="0.2"/>
+        <Image x:Name="sombra" Margin="-7,74,-1,4" Source="/pngegg.png" Stretch="Fill">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.6"/>
+            </Image.OpacityMask>
+        </Image>
+
+
+        <Rectangle x:Name="cuadro" HorizontalAlignment="Left" Height="58" Margin="710,0,0,0" VerticalAlignment="Center" Width="100" Fill="#FFE0E0E0"/>
+
+        <Image x:Name="header" Source="/maxresdefault.jpg" Margin="706,-2,19,67" Stretch="Fill" />
+
+        <StackPanel Margin="411,0,200,13" >
+            <Grid Height="84">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="22*"/>
+                </Grid.RowDefinitions>
+                <Label Content="PROFESIONAL" Grid.Row="0" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Franklin Gothic Medium"/>
+                <TextBlock x:Name="nombreProfesional" Grid.Row="1" Text="{Binding nombreProf, TargetNullValue=''}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="WrapWithOverflow" FontFamily="Microsoft JhengHei"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="711,22,24,20">
+            <Grid Height="61" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="28*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="horaActividad" Content="{Binding horaAct, TargetNullValue=''}" Background="{x:Null}" FontSize="16" FontWeight="Bold" FontFamily="Global Sans Serif" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"/>
+                <Label x:Name="lblActividad" Content="{Binding lblAct, TargetNullValue=''}" FontSize="12" HorizontalAlignment="Center" FontFamily="Segoe UI Semilight"  VerticalAlignment="Top" Margin="0,22,0,0" Grid.RowSpan="2" FontWeight="Bold" />
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="180,0,429,13" >
+            <Grid Height="84">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="22*"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="lblGerente" Grid.Row="0" Content="GERENTE" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="Franklin Gothic Medium"/>
+                <Label x:Name="nombreGerente" Content="{Binding nombreGer, TargetNullValue=''}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Grid.RowSpan="2" FontFamily="Microsoft JhengHei"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Margin="18,0,651,13" >
+            <Grid Height="84" Width="158">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="Empresa1" Grid.Row="0" Text="{Binding nombreEmp, TargetNullValue=''}" FontSize="26" Height="56" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" Margin="0,15,0,0" Grid.RowSpan="2" FontFamily="Microsoft JhengHei UI" FontWeight="Bold"/>
+                <TextBlock x:Name="fechaActividad" Grid.Row="1" Text="{Binding fechaAct, TargetNullValue=''}" VerticalAlignment="Top" HorizontalAlignment="Center" Height="30" FontSize="12" TextWrapping="WrapWithOverflow" FontFamily="Bahnschrift Light Condensed"/>
+            </Grid>
+        </StackPanel>
+        <Image x:Name="sombra_Copy" Margin="709,68,22,4" Source="/pngegg.png" Stretch="Fill">
+            <Image.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.6"/>
+            </Image.OpacityMask>
+        </Image>
+
+        <Grid Margin="607,0,131,12">
+
+            <Image x:Name="imgTgPurp" Margin="40,42,30,7" Source="/Recursos/Iconos/PURPURA/icons8-toggle-on-50.png" Stretch="Uniform" Visibility="Hidden" />
+            <Image x:Name="imgTgNeg" Margin="40,42,30,7" Source="/Recursos/Iconos/NEGRO/icons8-toggle-off-30.png" />
+            <Button x:Name="btnToggle" HorizontalAlignment="Left" Margin="40,42,30,7" VerticalAlignment="Top" Background="{x:Null}" Width="27" Height="12" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" Click="btnToggle_Click"/>
+
+            <Image x:Name="imgAlerNeg" Margin="43,12,33,43" Source="/Recursos/Iconos/NEGRO/icons8-box-important-24.png" Stretch="Uniform" Visibility="Visible"/>
+            <Image x:Name="imgAlerRoj" Margin="43,12,33,43" Source="/Recursos/Iconos/NEGRO/icons8-box-important-24 (1).png" Stretch="Uniform" Visibility="Hidden"/>
+            <Button x:Name="btnAlerta" HorizontalAlignment="Left"  Margin="39,8,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="27" Height="12" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btnAlerta_Click" Opacity="0"/>
+        </Grid>
+        <Rectangle x:Name="headerAlerta" Visibility="Hidden" Margin="706,-2,19,67" Stretch="Fill" Fill="#FFEE0000" />
+    </Grid>
+
+</UserControl>

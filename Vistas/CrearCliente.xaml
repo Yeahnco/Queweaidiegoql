@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="Vistas.CrearCliente"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="395.04" d:DesignWidth="670">
+    <Grid>
+        <Grid Margin="63,8,438,-8" >
+            <StackPanel Margin="0,-2,0,2">
+
+                <Label Content="Usuario:" Margin="0,0,0,7" Grid.Row="0" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Franklin Gothic Medium"/>
+
+                <Label Content="Contraseña:" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Margin="0,0,0,7" HorizontalAlignment="Right" Grid.Row="1"/>
+
+                <Label Content="Nombre Empresa:" Margin="0,0,0,8" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Franklin Gothic Medium"/>
+
+                <Label Content="RUT Empresa:" Margin="0,0,0,9" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium"  HorizontalAlignment="Right"/>
+
+                <Label Content="Dirección Empresa:" Margin="0,0,0,9" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Right"/>
+
+                <Label Content="Teléfono Empresa:" Margin="0,0,0,8" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Right"/>
+
+                <Label Content="Mail Gerente:" Margin="0,0,0,8" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium"  HorizontalAlignment="Right"/>
+
+                <Label Content="Nombre Gerente:" Margin="0,0,0,7" FontSize="12" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Franklin Gothic Medium"/>
+
+                <Label Content="Profesional:" Margin="0,0,0,9" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Right"/>
+
+                <Label Content="Plan:" Margin="0,0,0,9" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Right"/>
+
+                <Label Content="Contrato:" Margin="0,0,0,5" FontSize="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" HorizontalAlignment="Right"/>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid Margin="256,4,35,0" >
+            <StackPanel Margin="0,3,0,0">
+                <TextBox x:Name="txbNombreUs" Grid.Row="0" FontSize="11" HorizontalAlignment="Left" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22"/>
+                <Label />
+                <TextBox x:Name="txbContraseña" FontSize="11" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left"/>
+                <Label />
+                <TextBox x:Name="txbNombreEmp" Grid.Row="0" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" />
+                <Label />
+                <TextBox x:Name="txbRutEmp" FontSize="11" MaxLength="10" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" KeyDown="txbRutEmp_KeyDown" />
+                <Label />
+                <TextBox x:Name="txbDirecEmp" Grid.Row="0" FontSize="11" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" />
+                <Label />
+                <TextBox x:Name="txbTlfEmp" FontSize="11" Text="+569" MaxLength="12" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" KeyDown="txbTlfEmp_KeyDown" />
+                <Label />
+                <TextBox x:Name="txbMailGer" FontSize="11" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" />
+                <Label />
+                <TextBox x:Name="txbNomGer" FontSize="11" FontWeight="Bold" FontFamily="Franklin Gothic Medium" Width="308" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" KeyDown="txbNomGer_KeyDown" />
+                <Label />
+                <ComboBox x:Name="cbProfesional" SelectedIndex="1" DisplayMemberPath="Nombre_completo" SelectedValuePath="id_prof"  Width="250" FontSize="11" MinHeight="0" MinWidth="0" Height="25" HorizontalAlignment="Left" Initialized="cbProfesional_Initialized" />
+                <Label />
+                <ComboBox x:Name="cbPlan" SelectedIndex="1" Width="99" FontSize="11" MinHeight="0" MinWidth="0" Height="22" HorizontalAlignment="Left" Initialized="cbPlan_Initialized" />
+                <Label />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txbContrato" Width="150" IsReadOnly="True">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="1"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Button x:Name="btnContrato" Margin="3,1,0,0" Content="..." MinHeight="0" Width="54" BorderBrush="Black" Height="23" FontSize="8" Background="White" VerticalAlignment="Top" Click="btnContrato_Click" >
+                        <Button.Foreground>
+                            <SolidColorBrush Color="#FF958C8C" Opacity="1"/>
+                        </Button.Foreground>
+                    </Button>
+                </StackPanel>
+                </StackPanel>
+            <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="235,345,0,0" VerticalAlignment="Top" FontSize="6" Height="30" Width="57" Background="White" BorderBrush="#FF6200EE" Foreground="#FF6200EE" Click="btnGuardar_Click"/>
+            <Button x:Name="btnAtras" Content="atrás" HorizontalAlignment="Left" MinHeight="0" MinWidth="0" Margin="306,350,0,0" FontSize="6" Width="57" Height="21" VerticalAlignment="Top" Background="#FF6200EE" BorderBrush="#FF6200EE" Foreground="White" VerticalContentAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="btnAtras_Click"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

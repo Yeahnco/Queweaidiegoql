@@ -1,0 +1,175 @@
+﻿<UserControl x:Name="ucTarjetaAsesoria"  
+             x:Class="Vistas.TarjetaAsesoria"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" 
+             d:DesignWidth="830">
+    <Border Background="White"
+            BorderBrush="Gray"
+            BorderThickness="0,0,0,1">
+        <Grid x:Name="GridPrincipal" Initialized="GridPrincipal_Initialized" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <DockPanel x:Name="dockPanelSuperior">
+                <StackPanel Width="130" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblEmpresa" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               HorizontalContentAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               Height="35" 
+                               Width="110"
+                               Grid.Row="0"
+                               Content="{Binding DisplayNombreEmpresa, TargetNullValue=''}" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="txtblockRutEmpresa"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="12" 
+                                   Height="20" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   FontWeight="Bold"
+                                   Text="{Binding DisplayRutEmpresa, TargetNullValue=''}" 
+                                   Margin="0,45,0,24"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="150" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblGerente" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Column="1"
+                               Content="GERENTE" Height="30" Width="76"/>
+                        <TextBlock x:Name="txtblockNombreGerente"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Black"
+                                   TextAlignment="Center"
+                                   Text="{Binding DisplayNombreGerente, TargetNullValue=''}" Margin="0,30,0,0" Height="60" Width="130"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="150" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblProfNombre"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="2"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="PROFESIONAL" Height="30" Width="112"/>
+                        <TextBlock x:Name="txtblockProfNombre"
+                                   Grid.Column="2"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Black"
+                                   TextAlignment="Center"
+                                   Text="{Binding DisplayNombreProfesional, TargetNullValue=''}" 
+                                   Margin="0,30,0,0" Height="60" Width="130"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="150" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblRazon"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Grid.Column="3"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="RAZÓN" Height="30" Width="64"/>
+                        <TextBlock x:Name="txtRazon"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Foreground="Black"
+                                   TextAlignment="Left"
+                                   Text="{Binding DisplayRazon, TargetNullValue=''}"
+                                   Margin="0,30,0,0" Height="60" Width="130"/>
+
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="250" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblCaso"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Grid.Column="4"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="CASO" Height="30" Width="64"/>
+                        <TextBlock x:Name="txtCaso"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Left"
+                                   FontSize="12"
+                                   Foreground="Black"
+                                   TextAlignment="Left"
+                                   Text="{Binding DisplayCaso, TargetNullValue=''}" Margin="4,30,0,0" Height="60" Width="236"/>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelMedio"  
+                       Grid.Row="1">
+                <Grid>
+                    <TextBox Height="43"
+                         Width="600" 
+                         VerticalAlignment="Top"
+                         Background="#F5F5F5" 
+                         Margin="115,10,115,35"
+                         mah:TextBoxHelper.Watermark="DESCRIPCION"
+                         TextAlignment="Justify"
+                         VerticalContentAlignment="Top"
+                         IsEnabled="False"
+                         FontSize="12"
+                         FontWeight="DemiBold"
+                         Text="{Binding DisplayNombreAsesoria, TargetNullValue=''}"/>
+
+                    <TextBox Height="126"
+                         Width="600" 
+                         VerticalAlignment="Top"
+                         Background="#F5F5F5" 
+                         Margin="115,58,115,0"
+                         mah:TextBoxHelper.Watermark="DESCRIPCION"
+                         TextAlignment="Justify"
+                         VerticalContentAlignment="Top"
+                         IsEnabled="False"
+                         FontSize="12"
+                         FontWeight="DemiBold"
+                         Text="{Binding DisplayDescripcionAsesoria, TargetNullValue=''}"/>
+                </Grid>
+
+            </DockPanel>
+            <Button x:Name="BtnUpdDown" 
+                    Width="auto"
+                    Height="10"
+                    VerticalAlignment="Bottom"
+                    Content="up/down" 
+                    Click="BtnUpdDown_Click"
+                    Grid.Row="3"/>
+        </Grid>
+    </Border>
+</UserControl>

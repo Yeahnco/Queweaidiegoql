@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Vistas.StackCapacitacion"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="78" d:DesignWidth="180">
+    <ToggleButton x:Name="ToggleBtnCapacitacion"  
+                  Width="180" 
+                  Height="78" 
+                  Background="#FF4E16D1"
+                  Style="{DynamicResource MetroCircleToggleButtonStyle}" Checked="ToggleBtnCapacitacion_Checked">
+        <DockPanel Width="174"
+                   Height="72"
+                   Margin="1,1,1,1"
+                   Background="White">
+            <StackPanel DockPanel.Dock="Top"
+                        Height="36">
+                <TextBlock x:Name="txtBlockNombreCapacitacion"
+                           Width="174"
+                           Height="36"
+                           Foreground="Black"
+                           HorizontalAlignment="Center"
+                           Text="{Binding DisplayNombreCapacitacion, TargetNullValue=''}"
+                           Background="White"
+                           TextAlignment="Center"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Left"
+                        Height="36"
+                        Width="87">
+                <DatePicker x:Name="datePickerFechaCapacitacion"  Height="36"  
+                            Width="87"
+                            IsEnabled="False"
+                            BorderThickness="0"
+                            FontSize="10"
+                            FontWeight="Bold"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            SelectedDateFormat="Short"
+                            Text="{Binding DisplayFechaCapacitacion, TargetNullValue=''}"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right"
+                        Height="36"
+                        Width="87">
+                <mah:TimePicker Height="36"
+                                Width="87"
+                                IsEnabled="False"
+                                BorderThickness="0"
+                                FontSize="10"
+                                FontWeight="Bold"
+                                VerticalContentAlignment="Center"
+                                HorizontalContentAlignment="Center"
+                                SelectedTimeFormat="Short"
+                                SelectedDateTime="{Binding DisplayHoraCapacitacion, TargetNullValue=''}"
+                                Culture="es-CL"/>
+            </StackPanel>
+        </DockPanel>
+    </ToggleButton>
+</UserControl>

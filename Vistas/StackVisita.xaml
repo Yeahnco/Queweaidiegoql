@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Vistas.StackVisita"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="78" d:DesignWidth="180">
+    <ToggleButton x:Name="ToggleBtnVisita"  
+                  Background="#4E16D1" 
+                  Style="{DynamicResource MetroCircleToggleButtonStyle}" 
+                  Checked="ToggleBtnVisita_Checked" Unchecked="ToggleBtnVisita_Unchecked">
+        <DockPanel Width="174"
+                   Height="72"
+                   Margin="1,1,1,1"
+                   Background="White">
+            <StackPanel DockPanel.Dock="Top"
+                        Height="36">
+                <DatePicker x:Name="datePickerFechaVisita"
+                            IsEnabled="False"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Text="{Binding DisplayFechaVisita, TargetNullValue=''}" 
+                            SelectedDateFormat="Short"
+                            Height="36"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Bottom"
+                        Height="36">
+                <mah:TimePicker x:Name="timePickerHoraVisita"  
+                                IsEnabled="False"
+                                BorderThickness="0"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                FontWeight="Bold"
+                                SelectedDateTime="{Binding DisplayHoraVisita, TargetNullValue=''}"
+                                SelectedTimeFormat="Short"
+                                Height="36"
+                                Culture="es-CL"/>
+            </StackPanel>
+        </DockPanel>
+    </ToggleButton>
+</UserControl>

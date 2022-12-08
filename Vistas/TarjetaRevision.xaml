@@ -1,0 +1,231 @@
+﻿<UserControl x:Name="ucTarjetaRevision"  
+             x:Class="Vistas.TarjetaRevision"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="830">
+    <Border Background="White"
+            BorderBrush="Gray"
+            BorderThickness="0,0,0,1">
+        <Grid x:Name="GridPrincipal" Initialized="GridPrincipal_Initialized">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90*"/>
+                <RowDefinition Height="163*"/>
+                <RowDefinition Height="123*"/>
+                <RowDefinition Height="24*"/>
+            </Grid.RowDefinitions>
+            <DockPanel x:Name="dockPanelSuperior"  Grid.Row="0">
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="110">
+                    <Grid>
+                        <Label x:Name="lblNombreEmpresa" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               HorizontalContentAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               Width="90" 
+                               Height="40"
+                               Content="{Binding DisplayNombreEmpresa, TargetNullValue=''}"/>
+                        <TextBlock x:Name="txtblockRutEmpresa"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="12" 
+                                   Height="20" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   FontWeight="Bold"
+                                   Margin="0,50,0,-10"
+                                   Text="{Binding DisplayRutEmpresa, TargetNullValue=''}"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="125">
+                    <Grid>
+                        <Label x:Name="lblGerente" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="GERENTE" Margin="10,0,0,0"></Label>
+                        <TextBlock x:Name="txtblockNombreGerente"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   Text="{Binding DisplayNombreGerente, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="125">
+                    <Grid>
+                        <Label x:Name="lblProfesional" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="PROFESIONAL"></Label>
+                        <TextBlock x:Name="txtblockNombreProfesional"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   Text="{Binding DisplayNombreProfesional, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="200">
+                    <Grid>
+                        <Label x:Name="lblMejora" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="MEJORA" Margin="10,1,0,0"></Label>
+                        <TextBlock x:Name="txtblockActMejora"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="180"
+                                   Foreground="Black"
+                                   Text="{Binding DisplayNombreActMejora, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="150">
+                    <Grid>
+                        <Label x:Name="lblFechaActMejora" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="FECHA" Margin="8,0,0,0"/>
+                        <TextBlock x:Name="txtblockFechaActMejora"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Left"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="130"
+                                   Foreground="Black"
+                                   Text="{Binding DisplayFechaActMejora, TargetNullValue=''}" Margin="0,35,0,5"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Background="White"
+                            DockPanel.Dock="Left"
+                            Width="120">
+                    <Grid>
+                        <Label x:Name="lblHoraActMejora" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="HORA" Margin="3,0,0,0"></Label>
+                        <TextBlock x:Name="txtblockHoraActMejora"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Left"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   Text="{Binding DisplayHoraActMejora, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelMedio"  Grid.Row="1">
+                <Grid>
+                    <TextBox x:Name="txtBoxDescripcionActMejora"
+                             Width="610"
+                             Background="#F5F5F5"
+                             BorderBrush="#E0E0E0"
+                             BorderThickness="0,0,0,2"
+                             mah:TextBoxHelper.Watermark="DESCRIPCIÓN"
+                             Text="{Binding DisplayDescripcionActMejora, TargetNullValue=''}"
+                             TextAlignment="Center"
+                             VerticalContentAlignment="Top"
+                             HorizontalContentAlignment="Left"
+                             FontSize="12"
+                             IsEnabled="False"
+                             FontWeight="DemiBold" Margin="110,31,110,10"/>
+                    <mah:Tile x:Name="TileTomar"  
+                              Width="100"
+                              Height="50" 
+                              Margin="725,0,5,113"
+                              Background="White"
+                              Foreground="#FF4E16D1"
+                              BorderBrush="#FF4E16D1"
+                              BorderThickness="1"
+                              Content="TOMAR" Click="TileTomar_Click" RenderTransformOrigin="0.4,-0.436"></mah:Tile>
+                    <TextBox x:Name="txtBoxAsignacion"
+                        Width="610"
+                        Background="#F5F5F5"
+                        BorderBrush="#E0E0E0"
+                        BorderThickness="0,0,0,2"
+                        mah:TextBoxHelper.Watermark="Profesional Asignado"
+                        Text="{Binding DisplayProfAsignado, TargetNullValue=''}"
+                        TextAlignment="Center"
+                        VerticalContentAlignment="Top"
+                        HorizontalContentAlignment="Left"
+                        FontSize="12"
+                        IsEnabled="False"
+                        FontWeight="DemiBold" Margin="110,0,110,138"/>
+                </Grid>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelInferior"  
+                       Grid.Row="2">
+                <Grid>
+                    <TextBox x:Name="txtBoxInfoExtra"  
+                             Height="100"
+                             Background="#F5F5F5"
+                             BorderBrush="#E0E0E0"
+                             BorderThickness="0,0,0,2"
+                             mah:TextBoxHelper.Watermark="INGRESAR INFORMACIÓN DE IMPORTANCIA"
+                             Text="{Binding CreateInformacionDeImportancia, TargetNullValue=''}"
+                             Foreground="Gray"
+                             VerticalContentAlignment="Top"
+                             HorizontalContentAlignment="Left"
+                             FontSize="12"
+                             FontWeight="DemiBold" Margin="230,12,110,11"/>
+                    <mah:Tile x:Name="TileCumplida"  
+                              Height="25" 
+                              Width="100"
+                              Margin="121,30,609,68"
+                              Background="#FF4E16D1"
+                              FontWeight="DemiBold"
+                              Content="CUMPLIDA" Click="TileCumplida_Click"/>
+                    <mah:Tile x:Name="TileNoCumplida"  
+                              Height="25"
+                              Width="100"
+                              Margin="121,83,609,15"
+                              Background="#FF4E16D1"
+                              FontWeight="DemiBold"
+                              Content="NO CUMPLIDA" Click="TileNoCumplida_Click"/>
+                </Grid>
+            </DockPanel>
+            <Button x:Name="BtnUpdDown" 
+                    Width="auto"
+                    Height="25"
+                    VerticalAlignment="Center"
+                    Content="up/down" 
+                    Grid.Row="3" Click="BtnUpdDown_Click"
+                    />
+        </Grid>
+    </Border>
+</UserControl>

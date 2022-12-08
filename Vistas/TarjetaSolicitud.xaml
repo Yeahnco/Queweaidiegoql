@@ -1,0 +1,204 @@
+﻿<UserControl x:Name="ucTarjetaSolicitud"
+             x:Class="Vistas.TarjetaSolicitud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="830">
+    <Border Background="White"
+            BorderBrush="Gray"
+            BorderThickness="0,0,0,1">
+        <Grid x:Name="GridPrincipal" Initialized="GridPrincipal_Initialized">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <DockPanel x:Name="dockPanelSuperior"  Grid.Row="0">
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblNombreEmpresa" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               HorizontalContentAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               Width="90" 
+                               Height="40"
+                               Content="{Binding DisplayNombreEmpresa, TargetNullValue=''}"/>
+                        <TextBlock x:Name="txtblockRutEmpresa"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="12" 
+                                   Height="20" 
+                                   Width="110"
+                                   Foreground="Black"
+                                   FontWeight="Bold"
+                                   Text="{Binding DisplayRutEmpresa, TargetNullValue=''}" Margin="0,50,0,-10"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="120" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblGerente" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="GERENTE"></Label>
+                        <TextBlock x:Name="txtblockNombreGerente"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="110"
+                                   Text="{Binding DisplayNombreGerente, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="120" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblProfesional" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="PROFESIONAL"></Label>
+                        <TextBlock x:Name="txtblockNombreProfesional"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="110"
+                                   Text="{Binding DisplayNombreProfesional, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="150" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblRazonSolicitud" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="RAZÓN" Margin="0,1,0,0"></Label>
+                        <TextBlock x:Name="txtblockRazonCaso"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="140"
+                                   Text="{Binding DisplayRazonSolicitud, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblFecha" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="FECHA" Margin="5,1,0,0"></Label>
+                        <TextBlock x:Name="txtblockFechaSolicitud"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Left"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="100"
+                                   Text="{Binding DisplayFechaSolicitud, TargetNullValue=''}" Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <Label x:Name="lblHora" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="HORA" Margin="5,1,0,0"></Label>
+                        <TextBlock x:Name="txtblockHoraSolicitud"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   TextAlignment="Left"
+                                   FontSize="15" 
+                                   Height="50" 
+                                   Width="100"
+                                   Text="{Binding DisplayHoraSolicitud, TargetNullValue=''}" 
+                                   Margin="0,36,0,4"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid>
+                        <mah:Tile x:Name="tileAceptarSolicitud"
+                                  Height="25"
+                                  Width="100" Margin="5,15,5,-9"
+                                  Background="White"
+                                  BorderBrush="#FF4E16D1"
+                                  BorderThickness="1"
+                                  Foreground="#FF4E16D1"
+                                  Content="ACEPTAR" Click="tileAceptarSolicitud_Click"/>
+                        <mah:Tile x:Name="tileRechazarSolicitud"
+                                  Height="25"
+                                  Width="100" Margin="5,61,5,-55"
+                                  Background="#FF4E16D1"
+                                  Foreground="White"
+                                  Content="RECHAZAR" Click="tileRechazarSolicitud_Click"/>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelCentral"  
+                       Grid.Row="1">
+                <Grid>
+                    <TextBox x:Name="txtboxNombreSolicitud"
+                             Width="600" 
+                             Background="#F5F5F5" Margin="115,10,115,224"
+                             mah:TextBoxHelper.Watermark="Descripción"
+                             Text="{Binding DisplayNombreSolicitud, TargetNullValue=''}"
+                             TextAlignment="Justify"
+                             VerticalContentAlignment="Top"
+                             HorizontalContentAlignment="Left"
+                             IsEnabled="False"
+                             FontSize="12"
+                             FontWeight="DemiBold"/>
+                    <TextBox x:Name="txtboxDescripcionCaso"
+                             Width="600" 
+                             Background="#F5F5F5" Margin="115,51,115,46"
+                             mah:TextBoxHelper.Watermark="Descripción"
+                             Text="{Binding DisplayDescripcionSolicitud, TargetNullValue=''}"
+                             TextAlignment="Justify"
+                             VerticalContentAlignment="Top"
+                             HorizontalContentAlignment="Left"
+                             IsEnabled="False"
+                             FontSize="12"
+                             FontWeight="DemiBold"/>
+                </Grid>
+            </DockPanel>
+            <Button x:Name="BtnUpdDown" 
+                    Width="auto"
+                    Height="10"
+                    VerticalAlignment="Bottom"
+                    Content="up/down" 
+                    Grid.Row="2" Click="BtnUpdDown_Click"/>
+        </Grid>
+    </Border>
+</UserControl>

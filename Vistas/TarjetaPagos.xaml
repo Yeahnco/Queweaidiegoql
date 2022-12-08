@@ -1,0 +1,42 @@
+﻿<UserControl x:Name="ucPagos" x:Class="Vistas.TarjetaPagos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             mc:Ignorable="d" d:DesignWidth="800" Height="141" Background="White" BorderBrush="Black">
+    <Grid OpacityMask="Black" Margin="2,0,0,0">
+        <Grid Margin="-20,0,669,52">
+            <Grid Margin="0,0,0,33">
+                <Label x:Name="nEmpresa" Content="{Binding nombreEmp, TargetNullValue=''}" Width="154" Height="50" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+            </Grid>
+            <Grid Margin="0,36,0,3">
+                <Label x:Name="rEmpresa" Content="{Binding rutEmp, TargetNullValue=''}" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="156" Height="43" FontSize="18"/>
+            </Grid>
+        </Grid>
+
+        <Grid Margin="127,11,126,20">
+            <DataGrid x:Name="lvPagos" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Hidden" MouseLeftButtonUp="lvPagos_MouseLeftButtonUp">
+                <DataGrid.Columns >
+                    <DataGridTextColumn x:Name="funcionaPo" Header="Estado" Width="80" Binding="{Binding Estado, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Mes" Width="100" Binding="{Binding Mes}" />
+                    <DataGridTextColumn Header="Plan" Width="80" Binding="{Binding Plan}" />
+                    <DataGridTextColumn Header="Valor Plan" Width="94" Binding="{Binding ValorPlan}" />
+                    <DataGridTextColumn Header="Valor Extra" Width="100" Binding="{Binding ValorExtra}" />
+                    <DataGridTextColumn Header="Total" Width="107" Binding="{Binding Total}" />
+                    <DataGridTextColumn Header="idPag" Width="100" Binding="{Binding idPago}" />
+                    <DataGridTextColumn Header="idClien" Width="100" Binding="{Binding idCliente}" />
+                    <DataGridTextColumn Header="idComp" Width="100" Binding="{Binding idComprobante}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            
+        </Grid>
+        <Rectangle HorizontalAlignment="Center" Height="124" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+        <Button x:Name="btnComprobante" Content="Ver Comprobante" HorizontalAlignment="Left" Margin="691,46,0,0" VerticalAlignment="Top" Width="106" Height="21" FontSize="8" Background="#FF9945E9" Foreground="White" Click="btnComprobante_Click"/>
+        <Image Margin="-2,115,-9,-5" Source="/pngegg.png" Stretch="Fill"/>
+        <Button Content="Generar PDF" HorizontalAlignment="Left" Margin="706,77,0,0" VerticalAlignment="Top" Height="11" Width="81" BorderBrush="#FF9945E9" Foreground="#FF9945E9" Background="{x:Null}" FontSize="8"/>
+        <Button x:Name="btnCambiarEsPag" Visibility="Visible" Content="Cambiar estado pago" HorizontalAlignment="Left" VerticalAlignment="Top" Height="13" Width="82" BorderBrush="#FF9945E9" Foreground="#FF9945E9" Background="{x:Null}" FontSize="6" Margin="16,91,0,0" Click="btnCambiarEsPag_Click"/>
+        <Image x:Name="imgComprobante" Visibility="Hidden" Margin="227,0,257,0"/>
+
+    </Grid>
+</UserControl>

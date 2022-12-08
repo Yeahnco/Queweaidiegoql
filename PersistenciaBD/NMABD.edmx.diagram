@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="82aaf4ceba344580a38fe60993ae35b4" Name="Diagram1">
+        <EntityTypeShape EntityType="BD_NMAModel.Actividad" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Administrador" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Alerta" Width="1.5" PointX="5.25" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Checklist" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Cliente" Width="1.5" PointX="3" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Comprobantes" Width="1.5" PointX="7.5" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Contrato" Width="1.5" PointX="7.5" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Gerente" Width="1.5" PointX="5.25" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Pago" Width="1.5" PointX="9.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Plan" Width="1.5" PointX="7.5" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Profesional" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Reporte" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Rol" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Solicitud" Width="1.5" PointX="7.5" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Usuarios" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Accidente" Width="1.5" PointX="7.5" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Act_de_mejora" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Asesoria" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Capacitacion" Width="1.5" PointX="7.5" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.ERROR_LOG" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BD_NMAModel.Visita" Width="1.5" PointX="10.5" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="BD_NMAModel.FK_Act_de_mejora_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Actividad_Cliente1" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Actividad_Profesional" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Asesoria_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Capacitacion_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Visita_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Usuarios_Administrador" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Accidente_Alerta" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Alerta_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Visita_Checklist" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Cliente_Profesional" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Gerente_Cliente1" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Usuarios_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Pago_Comprobantes" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Contrato_Gerente" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Pago_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Solicitud_Gerente" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Pago_Plan" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Usuarios_Profesional" ManuallyRouted="false" />
+        <AssociationConnector Association="BD_NMAModel.FK_Usuarios_Rol1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

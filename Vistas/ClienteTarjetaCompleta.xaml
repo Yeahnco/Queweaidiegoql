@@ -1,0 +1,332 @@
+﻿<UserControl x:Name="ucVentana" 
+             x:Class="Vistas.ClienteTarjetaCompleta"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vistas"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="315" d:DesignWidth="830">
+
+    <Border Background="White">
+
+        <Grid x:Name="gridVentanaCompleta" Initialized="gridVentanaCompleta_Initialized">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <DockPanel x:Name="dockPanelSuperior" 
+                       LastChildFill="False"
+                       Grid.Row="0">
+                <StackPanel Width="100" 
+                            Background="White" 
+                            DockPanel.Dock="Left" Height="76">
+                    <Grid x:Name="gridNombreEmp" Height="70">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="63*"/>
+                            <RowDefinition Height="37*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="lblEmpresa" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Height="40" 
+                               Width="90"
+                               Grid.Row="0"
+                               TextWrapping="Wrap"
+                               Foreground="Black"
+                               Text="{Binding DisplayEmpresa, TargetNullValue=''}" MouseLeftButtonUp="lblEmpresa_MouseLeftButtonUp" MouseEnter="lblEmpresa_MouseEnter" MouseLeave="lblEmpresa_MouseLeave"/>
+
+                        <TextBlock x:Name="txtblockRutEmpresa"
+                                   TextWrapping="Wrap"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Left"
+                                   FontSize="15" 
+                                   Height="31" 
+                                   Width="86"
+                                   Text="{Binding DisplayRutEmpresa, TargetNullValue=''}" MouseLeftButtonUp="txtblockRutEmpresa_MouseLeftButtonUp" MouseEnter="txtblockRutEmpresa_MouseEnter" MouseLeave="txtblockRutEmpresa_MouseLeave" Margin="10,44,0,0" Grid.RowSpan="2"/>
+                        <TextBox x:Name="txbEditarNombreEmp" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Visibility="Hidden" KeyUp="txbEditarNombreEmp_KeyUp" Height="33"/>
+                        <TextBox x:Name="txbEditarRutEmp" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Visibility="Hidden" KeyUp="txbEditarRutEmp_KeyUp" Grid.RowSpan="2" Height="10"/>
+                        <Image x:Name="imgEditarNombreEmp" Margin="91,2,0,33" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden"/>
+                        <Image x:Name="imgEditarRutEmp" Margin="90,3,0,12" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden" Grid.Row="1"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="120" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid x:Name="gridGerente" Height="100" MouseEnter="gridGerente_MouseEnter" MouseLeave="gridGerente_MouseLeave">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblGerente" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15" 
+                               FontWeight="Bold" 
+                               Grid.Row="0"
+                               Content="GERENTE"></Label>
+                        <TextBlock x:Name="txtblockNombreGerente"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"
+                                   FontSize="12"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding DisplayGerente, TargetNullValue=''}" MouseLeftButtonUp="txtblockNombreGerente_MouseLeftButtonUp"  Width="94" Grid.ColumnSpan="2" Margin="13,0,0,0"
+                                   />
+                        <Image x:Name="imgEditarGerente" Margin="98,28,9,58" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden" Grid.RowSpan="2"/>
+                        <TextBox x:Name="txbEditarGer" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Left" Margin="3,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" Visibility="Hidden" KeyUp="txbEditarGer_KeyUp" Grid.RowSpan="2"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="110" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid x:Name="gridProf" Height="100">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblProfNombre"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Grid.Row="0"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="PROFESIONAL"></Label>
+                        <TextBlock x:Name="txtblockProfNombre"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   TextWrapping="WrapWithOverflow"
+                                   Text="{Binding DisplayProfNombre, TargetNullValue=''}"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="195" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid x:Name="gridMail" Height="100" MouseEnter="gridMail_MouseEnter" MouseLeave="gridMail_MouseLeave" MouseLeftButtonUp="gridMail_MouseLeftButtonUp" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblMailGerente"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               Grid.Row="0"
+                               FontWeight="Bold"
+                               Content="MAIL"></Label>
+                        <TextBlock x:Name="txtblockMailGerente"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"
+                                   FontSize="12"
+                                   TextDecorations="Underline"
+                                   TextWrapping="WrapWithOverflow"
+                                   Text="{Binding DisplayMailGerente, TargetNullValue=''}"></TextBlock>
+                        <Image x:Name="imgEditarMail" Margin="175,0,7,57" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden" Grid.Row="1"/>
+                        <TextBox x:Name="txbEditarMail" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Center" Margin="0,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" Visibility="Hidden" KeyUp="txbEditarMail_KeyUp" Grid.RowSpan="2"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="105" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid x:Name="gridTelefono" Height="100" MouseEnter="gridTelefono_MouseEnter" MouseLeave="gridTelefono_MouseLeave" MouseLeftButtonUp="gridTelefono_MouseLeftButtonUp" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblTelefono"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Grid.Row="0"
+                               Content="TELÉFONO">
+                        </Label>
+                        <TextBlock x:Name="txtblockTelefonoEmpresa"
+                                   Grid.Row="1"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   TextWrapping="WrapWithOverflow"
+                                   Text="{Binding DisplayTelefonoEmpresa, TargetNullValue=''}"></TextBlock>
+                        <Image x:Name="imgEditarTelef" Margin="89,2,3,55" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden" Grid.Row="1"/>
+                        <TextBox x:Name="txbEditarTelef" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Visibility="Hidden" KeyUp="txbEditarTelef_KeyUp" Grid.RowSpan="2"/>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Width="200" 
+                            Background="White" 
+                            DockPanel.Dock="Left">
+                    <Grid x:Name="gridDireccion" Height="100" MouseEnter="gridDireccion_MouseEnter" MouseLeave="gridDireccion_MouseLeave" MouseLeftButtonUp="gridDireccion_MouseLeftButtonUp">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="71*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="lblDireccionEmpresa"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="15"
+                               FontWeight="Bold"
+                               Content="DIRECCIÓN"></Label>
+                        <TextBlock x:Name="txtblockDirec"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Center"
+                                   FontSize="12"
+                                   Grid.Row="1"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding DisplayDireccion, TargetNullValue=''}"></TextBlock>
+                        <Image x:Name="imgEditarDirecc" Margin="171,3,16,54" Source="/Recursos/Iconos/GRIS/icons8-ball-point-pen-50.png" Stretch="Fill" Visibility="Hidden" Grid.Row="1"/>
+                        <TextBox x:Name="txbEditarDirecc" mah:TextBoxHelper.Watermark="" HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171" Visibility="Hidden" KeyUp="txbEditarDirecc_KeyUp" Grid.RowSpan="2"/>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <DockPanel x:Name="dockPanelMedio" 
+                       LastChildFill="False"
+                       Grid.Row="1">
+                <StackPanel x:Name="stckPanelClienteInfo2"
+                            Background="Transparent">
+                    <Grid Width="830"
+                      Height="120">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="VISITA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="0"
+                               FontSize="12"
+                               Background="Transparent"></Label>
+                        <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="94" Margin="0,26,207,0">
+                            <ScrollViewer Height="89" Width="200">
+                                <StackPanel x:Name="StckVisita"
+                                                Height="auto" 
+                                                Width="180">
+                                </StackPanel>
+                            </ScrollViewer>
+                        </StackPanel>
+                        <Label Content="CAPACITACIÓN" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="1"
+                               FontSize="12"
+                               Background="Transparent"></Label>
+                        <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="4" Height="94" Margin="0,26,207,0">
+                            <ScrollViewer Height="89" Width="200">
+                                <StackPanel x:Name="StckCapacitacion" 
+                                                Height="auto" 
+                                                Width="180"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                        <Label Content="ASESORÍA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="2"
+                               FontSize="12"></Label>
+                        <StackPanel VerticalAlignment="Top" 
+                                    Grid.Column="2" 
+                                    Height="94" 
+                                    Margin="0,26,0,0">
+                            <ScrollViewer Height="89" Width="200">
+                                <StackPanel x:Name="StckAsesoria"
+                                            Height="auto"
+                                            Width="180"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                        <Label Content="ACTIVIDAD DE MEJORA" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Column="3"
+                               FontSize="12"
+                               Background="Transparent"></Label>
+                        <StackPanel VerticalAlignment="Top" 
+                                    Height="94"
+                                    Grid.Column="2" 
+                                    Grid.ColumnSpan="2" 
+                                    Margin="207,28,0,0">
+                            <ScrollViewer Height="89" Width="200">
+                                <StackPanel x:Name="StckActMejora">
+                                </StackPanel>
+                            </ScrollViewer>
+                        </StackPanel>
+
+
+                    </Grid>
+                    <Grid Width="830"
+                      Height="50">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="25*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="ACCIDENTABILIDAD" 
+                               FontWeight="Black" 
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               Grid.Row="0"
+                               FontSize="12"></Label>
+                        <TextBlock Text="⚠%5"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Grid.Row="1"></TextBlock>
+                    </Grid>
+                    <Grid Width="830"
+                      Height="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="207*"/>
+                        </Grid.ColumnDefinitions>
+                        <mah:Tile x:Name="BtnAgregarVisita" Grid.Column="0" 
+                                  Height="30" 
+                                  Content="AGREGAR VISITA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10" Margin="31,10,161,10" Grid.ColumnSpan="2" Click="BtnAgregarVisita_Click"/>
+                        <mah:Tile x:Name="BtnAgregarCapacitacion" Grid.Column="1" 
+                                  Height="30" 
+                                  Content="AGREGAR CAPACITACIÓN" 
+                                  FontWeight="Bold" 
+                                  FontSize="10" Margin="75,10,117,10" Grid.ColumnSpan="2" Click="BtnAgregarCapacitacion_Click"/>
+                        <mah:Tile x:Name="BtnAgregarAsesoria" Grid.Column="2" 
+                                  Height="30" 
+                                  Content="AGREGAR ASESORIA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10" Margin="127,10,65,10" Grid.ColumnSpan="2" Click="BtnAgregarAsesoria_Click"/>
+                        <mah:Tile x:Name="BtnAgregarActividadMejora" Grid.Column="4" 
+                                  Height="30" 
+                                  Content="AGREGAR ACTV. MEJORA" 
+                                  FontWeight="Bold" 
+                                  FontSize="10" Click="BtnAgregarActividadMejora_Click"/>
+                        <Button x:Name="btnDescContrato" Visibility="Hidden" Content="Descargar Contrato" HorizontalAlignment="Left" VerticalAlignment="Center" Width="126" Click="btnDescContrato_Click" Grid.Column="1" Grid.ColumnSpan="2" Margin="142,0,0,0"/>
+                    </Grid>
+                </StackPanel>
+            </DockPanel>
+            <Button x:Name="btnUpdDown" 
+                    Width="auto"
+                    Height="10"
+                    VerticalAlignment="Bottom"
+                    Content="up/down" 
+                    Click="Button_Click"
+                    Grid.Row="3"/>
+
+
+        </Grid>
+    </Border>
+</UserControl>
